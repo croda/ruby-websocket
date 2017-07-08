@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Websocket Client</title>
+  </head>
+
+  <body>
+    <script>
+      var exampleSocket = new WebSocket("ws://localhost:4202");
+      exampleSocket.onopen = function(event) {
+        exampleSocket.send("Can you hear");
+      };
+      exampleSocket.onmessage = function(event) {
+        console.log(event.data);
+      }
+    </script>
+  </body>
+</html>
+
